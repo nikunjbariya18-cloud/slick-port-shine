@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Mail, Download } from "lucide-react";
 import heroPhone from "@/assets/hero-phone.png";
