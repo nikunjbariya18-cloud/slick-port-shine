@@ -5,8 +5,8 @@ import SectionTitle from "./SectionTitle";
 const highlights = [
   { icon: Smartphone, label: "Mobile Dev", desc: "Android & iOS" },
   { icon: Code, label: "Languages", desc: "C, Java, C++" },
-  { icon: Layers, label: "Cross-Platform", desc: "Flutter & React" },
-  { icon: Zap, label: "Problem Solver", desc: "Efficient Solutions" },
+  { icon: Layers, label: "Cross-Platform", desc: "Flutter & FlutterFlow" },
+  { icon: Zap, label: "Tools", desc: "Supabase, Figma" },
 ];
 
 const AboutSection = () => (
