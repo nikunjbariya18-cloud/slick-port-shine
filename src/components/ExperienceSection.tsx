@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
 import SectionTitle from "./SectionTitle";
-import trustopayLogo from "@/assets/trustopay-logo.jpeg";
+import trustopayLogo from "@/assets/trustopay-logo.png";
 
 const experiences = [
   {
