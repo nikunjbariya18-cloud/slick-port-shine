@@ -18,6 +18,9 @@ const skills = [
   { name: "NodeJS", icon: "🟩" },
   { name: "Android Studio", icon: "📱" },
   { name: "Flutter", icon: "🦋" },
+  { name: "FlutterFlow", icon: "🔧" },
+  { name: "Supabase", icon: "⚡" },
+  { name: "Figma", icon: "🎯" },
 ];
 
 const SkillsSection = () => (
