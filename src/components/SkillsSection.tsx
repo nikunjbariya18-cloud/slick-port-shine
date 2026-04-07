@@ -2,25 +2,25 @@ import { motion } from "framer-motion";
 import SectionTitle from "./SectionTitle";
 
 const skills = [
-  { name: "C", icon: "🔷" },
-  { name: "C++", icon: "🔶" },
-  { name: "HTML", icon: "🌐" },
-  { name: "CSS", icon: "🎨" },
-  { name: "JavaScript", icon: "⚡" },
-  { name: "Java", icon: "☕" },
-  { name: "React JS", icon: "⚛️" },
-  { name: ".NET", icon: "🟣" },
-  { name: "C#", icon: "🟢" },
-  { name: "PHP", icon: "🐘" },
-  { name: "Python", icon: "🐍" },
-  { name: "MySQL", icon: "🗄️" },
-  { name: "MongoDB", icon: "🍃" },
-  { name: "NodeJS", icon: "🟩" },
-  { name: "Android Studio", icon: "📱" },
-  { name: "Flutter", icon: "🦋" },
-  { name: "FlutterFlow", icon: "🔧" },
-  { name: "Supabase", icon: "⚡" },
-  { name: "Figma", icon: "🎯" },
+  { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+  { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+  { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+  { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  { name: "React JS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: ".NET", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" },
+  { name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+  { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "NodeJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { name: "Android Studio", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" },
+  { name: "Flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+  { name: "FlutterFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+  { name: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
+  { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
 ];
 
 const SkillsSection = () => (
@@ -39,7 +39,9 @@ const SkillsSection = () => (
             whileHover={{ scale: 1.08, y: -5 }}
             className="glass-card rounded-xl p-4 text-center cursor-default group hover:glow-border transition-all duration-300"
           >
-            <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">{icon}</div>
+            <div className="w-10 h-10 mx-auto mb-2 group-hover:scale-110 transition-transform">
+              <img src={icon} alt={name} className="w-full h-full object-contain" />
+            </div>
             <p className="text-sm font-semibold text-foreground">{name}</p>
           </motion.div>
         ))}
