@@ -67,11 +67,12 @@ const ExperienceSection = () => (
                 </div>
                 <ul className="mt-3 space-y-2">
                   {exp.description.map((point, j) => (
-                    <li key={j} className="flex items-start gap-3 text-sm leading-6 text-muted-foreground">
-                      <span aria-hidden="true" className="flex h-6 w-3 flex-shrink-0 items-center justify-center">
-                        <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                      </span>
-                      <span className="flex-1">{point}</span>
+                    <li key={j} className="relative pl-5 text-sm leading-6 text-muted-foreground">
+                      <span
+                        aria-hidden="true"
+                        className="absolute left-0 top-3 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-primary"
+                      />
+                      {point}
                     </li>
                   ))}
                 </ul>
