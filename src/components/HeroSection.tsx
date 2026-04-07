@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Mail, Download } from "lucide-react";
 import heroPhone from "@/assets/hero-phone.png";
@@ -12,7 +13,37 @@ const socials = [
   { icon: lnIcon, href: "https://www.linkedin.com/in/nikunj-bariya-138243357", alt: "LinkedIn" },
 ];
 
+const roles = ["Mobile App Developer", "Flutter Developer", "Full Stack Developer"];
+
 const HeroSection = () => {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = roles[roleIndex];
+    const speed = isDeleting ? 40 : 80;
+
+    if (!isDeleting && displayed === current) {
+      const pause = setTimeout(() => setIsDeleting(true), 1500);
+      return () => clearTimeout(pause);
+    }
+
+    if (isDeleting && displayed === "") {
+      setIsDeleting(false);
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setDisplayed(
+        isDeleting ? current.slice(0, displayed.length - 1) : current.slice(0, displayed.length + 1)
+      );
+    }, speed);
+
+    return () => clearTimeout(timeout);
+  }, [displayed, isDeleting, roleIndex]);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden grid-bg">
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/5 rounded-full blur-[100px]" />
@@ -37,7 +68,7 @@ const HeroSection = () => {
 
           <div className="flex items-center gap-2 justify-center md:justify-start mb-4">
             <span className="font-display text-sm md:text-base text-primary tracking-wider">
-              {"< Mobile App Developer />"}
+              {"< "}{displayed}<span className="animate-pulse">|</span>{" />"}
             </span>
           </div>
 
