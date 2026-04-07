@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
-import { Trophy, Code, Rocket, Users } from "lucide-react";
+import { Trophy, Code, Rocket } from "lucide-react";
 import SectionTitle from "./SectionTitle";
+import dnicaImg from "@/assets/dnica.png";
+import meciaImg from "@/assets/mecia.jpg";
 
 const achievements = [
-  { icon: Trophy, title: "Gold Medal", desc: "Secured 1st Rank at college level for academic excellence." },
-  { icon: Code, title: "Blind Coding", desc: "Participated in Blind Coding competition at college level." },
-  { icon: Rocket, title: "Mecia Hacks", desc: "Participated in creative tech event – Hackathon (Mecia Hacks 2.0)" },
-  { icon: Users, title: "Event Coordinator", desc: "Worked as Co-ordinator in the Vyom Event." },
+  { icon: Trophy, title: "Gold Medal", desc: "Secured 1st Rank at college level for academic excellence.", certificate: dnicaImg },
+  { icon: Code, title: "Blind Coding", desc: "Participated in Blind Coding competition at college level.", certificate: null },
+  { icon: Rocket, title: "Mecia Hacks", desc: "Participated in creative tech event – Hackathon (Mecia Hacks 2.0)", certificate: meciaImg },
 ];
 
 const AchievementsSection = () => (
@@ -14,8 +15,8 @@ const AchievementsSection = () => (
     <div className="container mx-auto px-4">
       <SectionTitle title="Achievements" />
 
-      <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
-        {achievements.map(({ icon: Icon, title, desc }, i) => (
+      <div className="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
+        {achievements.map(({ icon: Icon, title, desc, certificate }, i) => (
           <motion.div
             key={title}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -25,6 +26,11 @@ const AchievementsSection = () => (
             whileHover={{ y: -5, scale: 1.03 }}
             className="glass-card rounded-xl p-6 text-center hover:glow-border-strong transition-all duration-300 group"
           >
+            {certificate && (
+              <div className="w-full h-32 rounded-lg overflow-hidden mb-4 bg-muted">
+                <img src={certificate} alt={`${title} certificate`} className="w-full h-full object-cover" />
+              </div>
+            )}
             <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
               <Icon className="text-primary" size={26} />
             </div>

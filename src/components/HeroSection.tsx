@@ -1,17 +1,24 @@
 import { motion } from "framer-motion";
-import { Instagram, Facebook, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { ArrowDown, Mail, Download } from "lucide-react";
 import heroPhone from "@/assets/hero-phone.png";
-import profileImg from "@/assets/profile.png";
+import profileImg from "@/assets/profile.jpg";
+import instaIcon from "@/assets/insta.jpeg";
+import fbIcon from "@/assets/fb.png";
+import lnIcon from "@/assets/ln.png";
+
+const socials = [
+  { icon: instaIcon, href: "https://www.instagram.com/nik_bariya4516/", alt: "Instagram" },
+  { icon: fbIcon, href: "https://www.facebook.com/nikunj.bariya.167", alt: "Facebook" },
+  { icon: lnIcon, href: "https://www.linkedin.com/in/nikunj-bariya-138243357", alt: "LinkedIn" },
+];
 
 const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden grid-bg">
-      {/* Background glow orbs */}
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-[120px]" />
 
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-16 relative z-10">
-        {/* Left: Info */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -40,19 +47,15 @@ const HeroSection = () => {
 
           {/* Social icons */}
           <div className="flex gap-3 mb-6 justify-center md:justify-start">
-            {[
-              { icon: Instagram, href: "https://www.instagram.com/nik_bariya4516/" },
-              { icon: Facebook, href: "https://www.facebook.com/nikunj.bariya.167" },
-              { icon: Linkedin, href: "https://www.linkedin.com/in/nikunj-bariya-138243357" },
-            ].map(({ icon: Icon, href }, i) => (
+            {socials.map(({ icon, href, alt }, i) => (
               <a
                 key={i}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-muted-foreground hover:text-primary hover:glow-border transition-all duration-300"
+                className="w-10 h-10 rounded-lg glass-card flex items-center justify-center overflow-hidden hover:glow-border transition-all duration-300 hover:scale-110"
               >
-                <Icon size={18} />
+                <img src={icon} alt={alt} className="w-6 h-6 rounded-full object-cover" />
               </a>
             ))}
           </div>
@@ -69,36 +72,35 @@ const HeroSection = () => {
               Hire Me
             </a>
             <a
-              href="#contact"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3 rounded-lg font-bold text-sm border border-primary/40 text-primary hover:bg-primary/10 transition-all duration-300"
             >
-              Contact Me
+              <Download className="inline mr-2" size={16} />
+              Resume
             </a>
           </div>
         </motion.div>
 
-        {/* Right: Profile + Phone mockup */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="flex-1 flex flex-col items-center relative"
         >
-          {/* Profile image */}
           <div className="relative mb-4">
             <div className="w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-primary/50 animate-pulse-glow">
               <img src={profileImg} alt="Nikunj Bariya" className="w-full h-full object-cover" width={512} height={512} />
             </div>
           </div>
 
-          {/* Floating phone */}
           <div className="animate-float">
             <img src={heroPhone} alt="Mobile Development" className="w-56 md:w-72 drop-shadow-[0_0_30px_hsl(180_100%_50%/0.3)]" width={512} height={640} />
           </div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
