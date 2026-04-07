@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
-import { Trophy, Code, Rocket } from "lucide-react";
+import { Trophy, Rocket, Users } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import dnicaImg from "@/assets/dnica.png";
 import meciaImg from "@/assets/mecia.jpg";
+import vyomImg from "@/assets/vyom.png";
 
 const achievements = [
   { icon: Trophy, title: "Gold Medal", desc: "Secured 1st Rank at college level for academic excellence.", certificate: dnicaImg },
-  { icon: Code, title: "Blind Coding", desc: "Participated in Blind Coding competition at college level.", certificate: null },
   { icon: Rocket, title: "Mecia Hacks", desc: "Participated in creative tech event – Hackathon (Mecia Hacks 2.0)", certificate: meciaImg },
+  { icon: Users, title: "Vyom Event", desc: "Worked as Co-ordinator in the Vyom Event at SVIT, Vasad.", certificate: vyomImg },
 ];
 
 const AchievementsSection = () => (
