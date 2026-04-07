@@ -93,8 +93,8 @@ const HeroSection = () => {
             <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-primary/50 animate-pulse-glow">
               <img src={profileImg} alt="Nikunj Bariya" className="w-full h-full object-cover" width={512} height={512} />
             </div>
-            <div className="absolute -bottom-6 -right-6 animate-float">
-              <img src={heroPhone} alt="Mobile Development" className="w-28 md:w-36 drop-shadow-[0_0_30px_hsl(180_100%_50%/0.3)]" width={512} height={640} />
+            <div className="absolute -bottom-10 -right-10 animate-float">
+              <img src={heroPhone} alt="Mobile Development" className="w-40 md:w-52 drop-shadow-[0_0_30px_hsl(180_100%_50%/0.3)]" width={512} height={640} />
             </div>
           </div>
         </motion.div>
