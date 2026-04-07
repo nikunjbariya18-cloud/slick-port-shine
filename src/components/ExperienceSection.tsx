@@ -71,7 +71,7 @@ const ExperienceSection = () => (
                       key={j}
                       className="text-sm text-muted-foreground flex items-start gap-2"
                     >
-                      <span className="text-primary mt-1.5 text-[6px]">●</span>
+                      <span className="text-primary mt-[7px] text-[6px] flex-shrink-0">●</span>
                       {point}
                     </li>
                   ))}
