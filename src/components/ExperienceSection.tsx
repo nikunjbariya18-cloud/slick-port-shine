@@ -7,9 +7,9 @@ const experiences = [
   {
     company: "Trustopay Innovations Pvt Ltd",
     logo: trustopayLogo,
-    role: "Flutter Developer Intern",
+    role: "Software Developer Intern",
     type: "Internship (Current)",
-    duration: "2025 – Present",
+    duration: "2026 – Present",
     location: "India",
     description: [
       "Developing and maintaining mobile applications using Flutter & Dart",
