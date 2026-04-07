@@ -87,16 +87,15 @@ const HeroSection = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex-1 flex flex-col items-center relative"
+          className="flex-1 flex items-center justify-center relative"
         >
-          <div className="relative mb-4">
-            <div className="w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-primary/50 animate-pulse-glow">
+          <div className="relative">
+            <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-primary/50 animate-pulse-glow">
               <img src={profileImg} alt="Nikunj Bariya" className="w-full h-full object-cover" width={512} height={512} />
             </div>
-          </div>
-
-          <div className="animate-float">
-            <img src={heroPhone} alt="Mobile Development" className="w-56 md:w-72 drop-shadow-[0_0_30px_hsl(180_100%_50%/0.3)]" width={512} height={640} />
+            <div className="absolute -bottom-6 -right-6 animate-float">
+              <img src={heroPhone} alt="Mobile Development" className="w-28 md:w-36 drop-shadow-[0_0_30px_hsl(180_100%_50%/0.3)]" width={512} height={640} />
+            </div>
           </div>
         </motion.div>
       </div>
