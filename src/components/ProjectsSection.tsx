@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
 import SectionTitle from "./SectionTitle";
+import hhImg from "@/assets/HH.jpg";
+import ovsImg from "@/assets/OVS.jpg";
 
 const projects = [
   {
@@ -8,12 +9,14 @@ const projects = [
     desc: "An agriculture based e-commerce website.",
     tags: ["ASP.Net", "C#", "Visual Studio"],
     color: "from-green-500/20 to-primary/10",
+    image: hhImg,
   },
   {
     title: "Online Voting System",
     desc: "Web-based online voting application (Group Project).",
     tags: ["HTML5", "CSS", "JavaScript"],
     color: "from-blue-500/20 to-primary/10",
+    image: ovsImg,
   },
 ];
 
@@ -23,7 +26,7 @@ const ProjectsSection = () => (
       <SectionTitle title="Projects" />
 
       <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        {projects.map(({ title, desc, tags, color }, i) => (
+        {projects.map(({ title, desc, tags, color, image }, i) => (
           <motion.div
             key={title}
             initial={{ opacity: 0, y: 30 }}
@@ -33,12 +36,10 @@ const ProjectsSection = () => (
             whileHover={{ y: -8 }}
             className="glass-card rounded-2xl overflow-hidden group cursor-pointer hover:glow-border-strong transition-all duration-500"
           >
-            {/* Gradient header bar */}
             <div className={`h-2 bg-gradient-to-r ${color}`} />
             <div className="p-6">
-              {/* Phone mockup icon */}
-              <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
-                <ExternalLink className="text-primary" size={24} />
+              <div className="w-full h-40 rounded-xl overflow-hidden mb-4 bg-muted flex items-center justify-center">
+                <img src={image} alt={title} className="w-full h-full object-contain" />
               </div>
               <h3 className="font-display text-lg font-bold text-foreground mb-2">{title}</h3>
               <p className="text-sm text-muted-foreground mb-4">{desc}</p>
