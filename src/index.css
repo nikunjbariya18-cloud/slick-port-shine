@@ -88,8 +88,7 @@
     border: 1px solid hsl(var(--primary) / 0.15);
   }
   .section-glow-line {
-    @apply block mx-auto mt-2 rounded-full;
-    width: 120px;
+    @apply block w-full mt-2 rounded-full;
     height: 3px;
     background: hsl(var(--primary));
     box-shadow: 0 0 8px hsl(var(--primary) / 0.6), 0 0 20px hsl(var(--primary) / 0.3);
@@ -108,12 +107,9 @@
   border-radius: 3px;
 }
 
-/* Grid background pattern */
+/* Clean dark background */
 .grid-bg {
-  background-image: 
-    linear-gradient(hsl(180 100% 50% / 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(180 100% 50% / 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background: hsl(0 0% 5%);
 }
 
 /* Floating animation */

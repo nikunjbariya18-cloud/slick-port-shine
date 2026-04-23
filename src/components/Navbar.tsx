@@ -27,7 +27,9 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-4 py-2 rounded-lg text-sm font-bold text-primary-foreground bg-gradient-to-r from-primary to-secondary transition-all duration-300 hover:shadow-[0_0_25px_hsl(180_100%_50%/0.4)]"
           >
             Download Resume

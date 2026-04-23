@@ -8,10 +8,12 @@ const SectionTitle = ({ title }: { title: string }) => (
     transition={{ duration: 0.5 }}
     className="text-center mb-12"
   >
-    <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-      {title}
-    </h2>
-    <span className="section-glow-line" />
+    <div className="inline-block">
+      <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+        {title}
+      </h2>
+      <span className="section-glow-line" />
+    </div>
   </motion.div>
 );
 

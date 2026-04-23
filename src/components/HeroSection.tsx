@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, Download } from "lucide-react";
+import { Mail, Download } from "lucide-react";
 import heroPhone from "@/assets/hero-phone.png";
-import profileImg from "@/assets/profile.jpg";
+import profileImg from "@/assets/pf1_1080x1080.jpg";
 import instaIcon from "@/assets/insta.jpeg";
 import fbIcon from "@/assets/fb.png";
 import lnIcon from "@/assets/ln.png";
 
 const socials = [
-  { icon: instaIcon, href: "https://www.instagram.com/nik_bariya4516/", alt: "Instagram" },
+  { icon: instaIcon, href: "https://www.instagram.com/nik.bariya4516?igsh=N2gwYndkaDkwdncw", alt: "Instagram" },
   { icon: fbIcon, href: "https://www.facebook.com/nikunj.bariya.167", alt: "Facebook" },
   { icon: lnIcon, href: "https://www.linkedin.com/in/nikunj-bariya-138243357", alt: "LinkedIn" },
 ];
@@ -46,15 +46,12 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden grid-bg">
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/5 rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-[120px]" />
-
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-16 relative z-10">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="flex-1 text-center md:text-left"
+          className="flex-1 order-2 md:order-1 text-center md:text-left"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 mb-4">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -118,11 +115,22 @@ const HeroSection = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex-1 flex items-center justify-center relative"
+          className="flex-1 order-1 md:order-2 flex items-center justify-center relative"
         >
           <div className="relative">
-            <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-primary/50 animate-pulse-glow">
-              <img src={profileImg} alt="Nikunj Bariya" className="w-full h-full object-cover" width={512} height={512} />
+            <div className="absolute inset-[12px] rounded-full bg-cyan-400/20 blur-[16px] scale-[1.01]" />
+            <div className="relative w-60 h-60 md:w-72 md:h-72 rounded-full p-[3px] bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.55),0_0_18px_rgba(34,211,238,0.3),0_0_28px_rgba(34,211,238,0.14)]">
+              <div className="w-full h-full rounded-full p-[6px] bg-[#0b0f14]">
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <img
+                    src={profileImg}
+                    alt="Nikunj Bariya"
+                    className="w-full h-full object-cover object-center scale-100"
+                    width={1080}
+                    height={1080}
+                  />
+                </div>
+              </div>
             </div>
             <div className="absolute -bottom-10 -right-10 animate-float">
               <img src={heroPhone} alt="Mobile Development" className="w-40 md:w-52 drop-shadow-[0_0_30px_hsl(180_100%_50%/0.3)]" width={512} height={640} />
@@ -130,14 +138,6 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </div>
-
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <ArrowDown className="text-primary/50" size={24} />
-      </motion.div>
     </section>
   );
 };
