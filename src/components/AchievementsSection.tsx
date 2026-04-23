@@ -6,9 +6,27 @@ import meciaImg from "@/assets/mecia.jpg";
 import vyomImg from "@/assets/vyom.png";
 
 const achievements = [
-  { icon: Trophy, title: "Gold Medal", desc: "Secured 1st Rank at college level for academic excellence.", certificate: dnicaImg },
-  { icon: Rocket, title: "Mecia Hacks", desc: "Participated in creative tech event – Hackathon (Mecia Hacks 2.0)", certificate: meciaImg },
-  { icon: Users, title: "Vyom Event", desc: "Worked as Co-ordinator in the Vyom Event at SVIT, Vasad.", certificate: vyomImg },
+  {
+    icon: Trophy,
+    title: "Gold Medal",
+    desc: "Secured 1st Rank at college level for academic excellence.",
+    certificate: dnicaImg,
+    imageClass: "object-cover object-[58%_center] scale-[1.06]",
+  },
+  {
+    icon: Rocket,
+    title: "Mecia Hacks",
+    desc: "Participated in creative tech event – Hackathon (Mecia Hacks 2.0)",
+    certificate: meciaImg,
+    imageClass: "object-cover object-center scale-[1.04]",
+  },
+  {
+    icon: Users,
+    title: "Vyom Event",
+    desc: "Worked as Co-ordinator in the Vyom Event at SVIT, Vasad.",
+    certificate: vyomImg,
+    imageClass: "object-cover object-center scale-[1.05]",
+  },
 ];
 
 const AchievementsSection = () => (
@@ -17,7 +35,7 @@ const AchievementsSection = () => (
       <SectionTitle title="Achievements" />
 
       <div className="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
-        {achievements.map(({ icon: Icon, title, desc, certificate }, i) => (
+        {achievements.map(({ icon: Icon, title, desc, certificate, imageClass }, i) => (
           <motion.div
             key={title}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -28,8 +46,8 @@ const AchievementsSection = () => (
             className="glass-card rounded-xl p-6 text-center hover:glow-border-strong transition-all duration-300 group"
           >
             {certificate && (
-              <div className="w-full h-32 rounded-lg overflow-hidden mb-4 bg-muted">
-                <img src={certificate} alt={`${title} certificate`} className="w-full h-full object-cover" />
+              <div className="w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-white border border-black/5 shadow-sm">
+                <img src={certificate} alt={`${title} certificate`} className={`w-full h-full ${imageClass}`} />
               </div>
             )}
             <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
