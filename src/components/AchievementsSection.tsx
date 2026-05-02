@@ -12,7 +12,8 @@ const achievements = [
     title: "Gold Medal",
     desc: "Secured 1st Rank at college level for academic excellence.",
     certificate: dnicaImg,
-    imageClass: "object-cover object-[58%_center] scale-[1.06]",
+    imageClass: "w-full h-auto object-contain object-center",
+    featured: true,
   },
   {
     icon: Rocket,
