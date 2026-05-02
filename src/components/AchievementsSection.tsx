@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { Trophy, Rocket, Users } from "lucide-react";
+import { Award, Trophy, Rocket, Users } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import dnicaImg from "@/assets/dnica.png";
 import meciaImg from "@/assets/mecia.jpg";
+import sarjan2026Img from "@/assets/sarjan-2026-certificate.jpg";
 import vyomImg from "@/assets/vyom.png";
 
 const achievements = [
@@ -27,6 +28,14 @@ const achievements = [
     certificate: vyomImg,
     imageClass: "object-cover object-center scale-[1.05]",
   },
+  {
+    icon: Award,
+    title: "SARJAN 2026",
+    desc: "Received a certificate of appreciation for the Curiosity Hub project contest.",
+    certificate: sarjan2026Img,
+    imageClass: "object-contain object-center",
+    featured: true,
+  },
 ];
 
 const AchievementsSection = () => (
@@ -34,8 +43,8 @@ const AchievementsSection = () => (
     <div className="container mx-auto px-4">
       <SectionTitle title="Achievements" />
 
-      <div className="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
-        {achievements.map(({ icon: Icon, title, desc, certificate, imageClass }, i) => (
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+        {achievements.map(({ icon: Icon, title, desc, certificate, imageClass, featured }, i) => (
           <motion.div
             key={title}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -43,10 +52,14 @@ const AchievementsSection = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
             whileHover={{ y: -5, scale: 1.03 }}
-            className="glass-card rounded-xl p-6 text-center hover:glow-border-strong transition-all duration-300 group"
+            className={`glass-card rounded-xl p-6 text-center hover:glow-border-strong transition-all duration-300 group ${
+              featured ? "sm:col-span-2 lg:col-span-3 max-w-3xl mx-auto w-full" : ""
+            }`}
           >
             {certificate && (
-              <div className="w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-white border border-black/5 shadow-sm">
+              <div className={`w-full rounded-xl overflow-hidden mb-4 bg-white border border-black/5 shadow-sm ${
+                featured ? "aspect-[16/11]" : "aspect-[4/3]"
+              }`}>
                 <img src={certificate} alt={`${title} certificate`} className={`w-full h-full ${imageClass}`} />
               </div>
             )}
