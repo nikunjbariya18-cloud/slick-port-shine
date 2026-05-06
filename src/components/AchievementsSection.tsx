@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Trophy, Rocket, Users } from "lucide-react";
+import { Trophy, Rocket, Users, Award } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import dnicaImg from "@/assets/dnica.png";
 import meciaImg from "@/assets/mecia.jpg";
@@ -10,31 +10,30 @@ const achievements = [
   {
     icon: Trophy,
     title: "Gold Medal",
-    desc: "Secured 1st Rank at college level for academic excellence.",
+    desc: "Achieved the gold medal in college sem-2 🥇🎓",
     certificate: dnicaImg,
-    imageClass: "w-full h-auto object-contain object-center",
-    featured: true,
+    imageClass: "object-cover object-center scale-[1.04]",
   },
   {
     icon: Rocket,
     title: "Mecia Hacks",
-    desc: "Participated in creative tech event – Hackathon (Mecia Hacks 2.0)",
+    desc: "Participated in creative tech event – Hackathon (Mecia Hacks 2.0) 🚀💻",
     certificate: meciaImg,
     imageClass: "object-cover object-center scale-[1.04]",
   },
   {
     icon: Users,
     title: "Vyom Event",
-    desc: "Worked as Co-ordinator in the Vyom Event at SVIT, Vasad.",
+    desc: "Worked as Co-ordinator in the Vyom Event at SVIT, Vasad. 🤝👨‍💻",
     certificate: vyomImg,
     imageClass: "object-cover object-center scale-[1.05]",
   },
   {
+    icon: Award,
     title: "SARJAN 2026",
-    desc: "Received a certificate of appreciation for the Curiosity Hub project contest.",
+    desc: "Listed in top project name sarjan event 🏆✨",
     certificate: sarjan2026Img,
-    imageClass: "w-full h-auto object-contain object-center",
-    featured: true,
+    imageClass: "object-cover object-center scale-[1.04]",
   },
 ];
 
