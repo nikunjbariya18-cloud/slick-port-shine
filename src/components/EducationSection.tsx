@@ -3,7 +3,7 @@ import { GraduationCap, School, Calendar, Star, Percent } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 
 const education = [
-  { icon: GraduationCap, school: "SVIT, Vasad", degree: "Master in Computer Application (MCA)", year: "2024–2026", score: "SPI: 8.00", scoreIcon: Star },
+  { icon: GraduationCap, school: "SVIT, Vasad", degree: "Master in Computer Application (MCA)", year: "2024–2026", score: "SPI: 8.26", scoreIcon: Star },
   { icon: GraduationCap, school: "DNICA, Anand", degree: "Bachelor in Computer Application (BCA)", year: "2022–2024", score: "CGPA: 9.16", scoreIcon: Star },
   { icon: School, school: "T.B. High School, Bhadran", degree: "12th Science", year: "2018–2019", score: "Per: 53.54", scoreIcon: Percent },
   { icon: School, school: "Sarvajanik High School, Valvod", degree: "10th", year: "2016–2017", score: "Per: 75.00", scoreIcon: Percent },
