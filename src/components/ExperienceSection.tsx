@@ -9,7 +9,7 @@ const experiences = [
     logo: trustopayLogo,
     role: "Software Developer Intern",
     type: "Internship (Completed)",
-    duration: "January 2026 – July 2026",
+    duration: "January 2026 – June 2026",
     location: "India",
     description: [
       "Developed and maintained mobile applications using Flutter & Dart for fintech solutions",
