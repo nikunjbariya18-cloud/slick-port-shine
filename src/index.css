@@ -133,3 +133,27 @@
   from { width: 0 }
   to { width: 100% }
 }
+
+/* Disable animations and transitions on small screens (mobile) */
+@media (max-width: 768px) {
+  .animate-float,
+  .animate-pulse,
+  .animate-pulse-glow,
+  .section-glow-line {
+    animation: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Turn off transitions used for hover/entrance effects */
+  * {
+    transition: none !important;
+  }
+}
+
+/* Honor user's reduced motion preference on all screens */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
