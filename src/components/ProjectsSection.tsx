@@ -95,7 +95,7 @@ const ProjectsSection = () => (
             <div className={`h-2 bg-gradient-to-r ${color}`} />
             <div className="p-6">
               <div className={`w-full h-44 rounded-xl overflow-hidden mb-4 ${imageBg ?? "bg-muted/60"} flex items-center justify-center ${title === "Personal Portfolio" ? "" : "p-5"}`}>
-                <img src={image} alt={title} className={`w-full h-full ${title === "Personal Portfolio" ? "object-cover" : "object-contain"}`} />
+                <img src={image} alt={title} className="w-full h-full object-contain" />
               </div>
               <h3 className="font-display text-lg font-bold text-foreground mb-2">{title}</h3>
               <p className="text-sm text-muted-foreground mb-4 min-h-[72px]">{desc}</p>
