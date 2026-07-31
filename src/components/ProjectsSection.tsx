@@ -5,8 +5,35 @@ import tpInvoiceImg from "@/assets/TP_Brandmark_Color_Logo-100.png";
 import curiosityHubImg from "@/assets/Curioisityhub.png";
 import harvestHubLegacyImg from "@/assets/harvesthub-1-logo.png";
 import ovsImg from "@/assets/ovs-transparent.png";
+import farmAlertImg from "@/assets/farm-alert-logo.png";
+import travelMateImg from "@/assets/travelmate-logo.jpg";
+import portfolioImg from "@/assets/portfolio-screenshot.png";
 
 const projects = [
+  {
+    title: "Farm-Alert",
+    desc: "A Gen-AI web application providing real-time weather forecasts, news updates, and agricultural advisory tips tailored for modern farming.",
+    tags: ["React", "Tailwind CSS", "Supabase", "Gen-AI"],
+    color: "from-emerald-500/20 to-green-400/10",
+    image: farmAlertImg,
+    imageBg: "bg-white",
+  },
+  {
+    title: "TravelMate",
+    desc: "A Gen-AI based travel companion app that automates trip planning, itinerary creation, and budget tracking for seamless travel experiences.",
+    tags: ["React", "Tailwind CSS", "Gemini API", "AI Budgeting"],
+    color: "from-amber-500/20 to-orange-400/10",
+    image: travelMateImg,
+    imageBg: "bg-black",
+  },
+  {
+    title: "Personal Portfolio",
+    desc: "A sleek, responsive portfolio website showcasing career information, skills, projects, and achievements.",
+    tags: ["React", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    color: "from-cyan-500/20 to-blue-400/10",
+    image: portfolioImg,
+    imageBg: "bg-zinc-950",
+  },
   {
     title: "HarvestHub",
     desc: "An agriculture based e-commerce website.",
