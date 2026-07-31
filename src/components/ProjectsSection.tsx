@@ -61,7 +61,7 @@ const projects = [
   {
     title: "TravelMate",
     desc: "A Gen-AI based travel companion app that automates trip planning, itinerary creation, and budget tracking for seamless travel experiences.",
-    tags: ["React", "Tailwind CSS", "Gemini API"],
+    tags: ["Flutter", "Tailwind CSS", "Gemini API"],
     color: "from-amber-500/20 to-orange-400/10",
     image: travelMateImg,
     imageBg: "bg-white",
