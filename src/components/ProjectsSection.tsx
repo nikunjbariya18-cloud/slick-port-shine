@@ -56,7 +56,7 @@ const projects = [
     tags: ["React", "Tailwind CSS", "Supabase"],
     color: "from-emerald-500/20 to-green-400/10",
     image: farmAlertImg,
-    imageBg: "bg-black",
+    imageBg: "bg-white",
   },
   {
     title: "TravelMate",
@@ -64,7 +64,7 @@ const projects = [
     tags: ["React", "Tailwind CSS", "Gemini API"],
     color: "from-amber-500/20 to-orange-400/10",
     image: travelMateImg,
-    imageBg: "bg-black",
+    imageBg: "bg-white",
   },
   {
     title: "Personal Portfolio",
@@ -72,7 +72,7 @@ const projects = [
     tags: ["React", "Tailwind CSS", "TypeScript"],
     color: "from-cyan-500/20 to-blue-400/10",
     image: portfolioImg,
-    imageBg: "bg-zinc-950",
+    imageBg: "bg-white",
   },
 ];
 
