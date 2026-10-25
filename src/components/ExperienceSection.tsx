@@ -7,7 +7,7 @@ const experiences = [
   {
     company: "Trustopay Innovations Pvt Ltd",
     logo: trustopayLogo,
-    role: "Software Developer Intern",
+    role: "Mobile App Developer Intern",
     type: "Internship (Completed)",
     duration: "January 2026 – June 2026",
     location: "India",
