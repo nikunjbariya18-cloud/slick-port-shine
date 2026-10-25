@@ -62,6 +62,8 @@ const AchievementsSection = () => (
                 <img
                   src={certificate}
                   alt={`${title} certificate`}
+                  loading="lazy"
+                  aria-label={`${title} certificate`}
                   className={featured ? imageClass : `w-full h-full ${imageClass}`}
                 />
               </div>
