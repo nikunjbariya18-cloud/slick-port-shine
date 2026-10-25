@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Trophy, Rocket, Users, Award } from "lucide-react";
 import SectionTitle from "./SectionTitle";
-import dnicaImg from "@/assets/dnica.png";
+import dnicaCertificateImg from "@/assets/dnica.png";
 import meciaImg from "@/assets/mecia.jpg";
 import sarjan2026Img from "@/assets/sarjan-2026-certificate.jpg";
 import vyomImg from "@/assets/vyom.png";
@@ -11,7 +11,7 @@ const achievements = [
     icon: Trophy,
     title: "Gold Medal",
     desc: "Achieved the gold medal in college sem-2 🥇🎓",
-    certificate: dnicaImg,
+    certificate: dnicaCertificateImg,
     imageClass: "object-cover object-center scale-[1.04]",
   },
   {
